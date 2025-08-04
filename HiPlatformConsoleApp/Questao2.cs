@@ -13,7 +13,7 @@
                 new("Produto E", 15, 18.0, false, 0.25, EVolumeOcupado.Medio),
                 new("Produto F", 5, 22.0, true, 0.35, EVolumeOcupado.Grande),
                 new("Produto G", 12, 14.0, false, 0.05, EVolumeOcupado.Pequeno),
-                new("Produto H", 10, 14.0, false, 0.05, EVolumeOcupado.Pequeno),
+                new("Produto H", 10, 7.0, false, 0.05, EVolumeOcupado.Pequeno),
             };
 
             var estoque = new Estoque();
@@ -81,11 +81,11 @@
 
         public void CalcularCustoAjustado()
         {
-            Custo *= VolumeOcupado switch
+            Custo += VolumeOcupado switch
             {
-                EVolumeOcupado.Medio => 0.05,
-                EVolumeOcupado.Grande => 0.1,
-                _ => 0.02
+                EVolumeOcupado.Medio => (0.05 * Custo),
+                EVolumeOcupado.Grande => (0.1 * Custo),
+                _ => (0.02 * Custo)
             };
 
             if (NecessitaRefrigeracao)

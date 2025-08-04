@@ -1,4 +1,5 @@
 using HiPlatform.Api.Dados;
+using HiPlatform.Api.Filtros;
 using HiPlatform.Api.Servico;
 using HiPlatform.Api.Servico.Interfaces;
 
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
+builder.Services.AddMvc(options => options.Filters.Add(typeof(ExcecaoFiltro)));
 
 var app = builder.Build();
 
