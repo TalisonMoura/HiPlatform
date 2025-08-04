@@ -1,6 +1,9 @@
+using HiPlatform.Api.Dados;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<AplicacaoDbContexto>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -22,5 +25,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+await app.AtualizarBancoDeDadosAsync(app.Environment);
 
 await app.RunAsync();

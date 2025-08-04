@@ -16,7 +16,7 @@ public class ElementoEstoque : EntidadeBase
 
     protected ElementoEstoque() { }
 
-    public ElementoEstoque(decimal preco, string cnpjFabricante, decimal custo)
+    public ElementoEstoque(decimal preco, decimal custo, string cnpjFabricante)
     {
         Preco = preco;
         Custo = custo;
