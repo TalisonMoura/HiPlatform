@@ -23,7 +23,9 @@
 
         public static void MostrarCustoItemCalculado()
         {
+            Console.WriteLine("Questão 2");
             CustoItemCalculado();
+            Console.WriteLine();
         }
     }
 

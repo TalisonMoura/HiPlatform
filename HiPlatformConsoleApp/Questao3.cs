@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace HiPlatform
+﻿namespace HiPlatform
 {
     public static class Questao3
     {
@@ -33,10 +31,12 @@ namespace HiPlatform
                 new(new Rua("34407-150", "Rua F"), 6, 4)
             };
 
+            Console.WriteLine("Questão 3");
             foreach (var rua in ObterRuasMaisPopulosas(casas))
             {
                 Console.WriteLine(rua.ToString());
             }
+            Console.WriteLine();
         }
     }
 
