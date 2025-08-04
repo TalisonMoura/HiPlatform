@@ -1,9 +1,11 @@
 using HiPlatform.Api.Dados;
+using HiPlatform.Api.Servico;
+using HiPlatform.Api.Servico.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddDbContext<AplicacaoDbContexto>();
+builder.Services.AddScoped<IDataServico, DataServico>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

@@ -1,6 +1,5 @@
 ﻿using HiPlatfromApi.Entidades;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 
 namespace HiPlatform.Api.Dados
 {
